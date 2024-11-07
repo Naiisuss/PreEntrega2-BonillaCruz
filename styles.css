@@ -1,0 +1,124 @@
+/* Estilos base */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+    background-color: #111;
+    color: #ddd;
+}
+
+header {
+    background-color: #181818;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+}
+
+main {
+    padding: 1.5em;
+}
+
+/* Estilos para las secciones */
+
+section {
+    background-color: #222;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Special Elite', cursive;
+    color: #ece9da;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* article y aside usando float */
+
+#detalles {
+    margin-top: 2em;
+    overflow: hidden; 
+    position: relative; 
+}
+
+#detalles article {
+    background-color: #222;
+    padding: 1.5em;
+    width: 68%; 
+    float: left; 
+}
+
+#detalles aside {
+    background-color: #333;
+    padding: 1.5em;
+    border-radius: 10px;
+    width: 24%; /* Ancho del aside */
+    position: absolute;
+    right: 0; 
+    top: 50%; 
+    transform: translateY(-50%); /* ajustar el centro */
+}
+
+#detalles h2 {
+    color: #e9e4d0;
+}
+
+#detalles ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#detalles ul li {
+    margin-bottom: 10px;
+}
+
+#detalles ul li a {
+    color: #ebe2c1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#detalles ul li a:hover {
+    color: #ff6600;
+}
+
+/* Estilos para los indices de abajo */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
