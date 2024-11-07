@@ -1,61 +1,84 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-      <title>Silent Hill 2 - Personajes</title>
+    <title>Silent Hill 2 - Personajes</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-         <!--indice-->
-        <h1>Personajes de Silent Hill 2</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="personajes.html">Personajes</a></li>
-                <li><a href="lugares.html">Lugares</a></li>
+<body class="bg-dark text-light">
+
+    <!-- Banner con título y navegación -->
+    <header class="header">
+        <div class="header__overlay"></div>
+        <h1 class="header__title">Silent Hill 2</h1>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html" class="header__nav-link">Inicio</a></li>
+                <li class="header__nav-item"><a href="personajes.html" class="header__nav-link">Personajes</a></li>
+                <li class="header__nav-item"><a href="lugares.html" class="header__nav-link">Lugares</a></li>
+                <li class="header__nav-item"><a href="historia.html" class="header__nav-link">Historia</a></li>
+                <li class="header__nav-item"><a href="monstruos.html" class="header__nav-link">Monstruos</a></li>
             </ul>
         </nav>
     </header>
 
-     <!--secciones para los pj -->
+    <!-- Título de la sección de personajes -->
+    <div class="container text-center py-4">
+        <h2 class="header__title" style="font-family: 'Special Elite', cursive;">Personajes de Silent Hill 2</h2>
+    </div>
+    
+    <!-- Contenido principal con la cuadrícula de personajes -->
+    <main class="main container mt-5 personajes-grid">
+        <div class="row">
+            <section class="col-md-4 mb-4 text-center">
+                <h2 class="main__section-title">James Sunderland</h2>
+                <img src="img/jamessunderland.png" alt="James Sunderland" class="img-fluid">
+                <p>James es un hombre destrozado por el dolor y la culpa. Tras recibir una carta de su esposa Mary, quien murió tres años antes, se adentra en el pueblo de Silent Hill en busca de respuestas. A lo largo de su travesía, James enfrenta las manifestaciones físicas de su tormento psicológico.</p>
+            </section>
 
-    <main>
-         <section>
-            <h2>James Sunderland </h2>
-            <img src="img/jamessunderland.png" alt="center" alt="James Sunderland">
-            <p>El protagonista principal de Silent Hill 2, James, es un hombre atormentado por la muerte de su esposa Mary.
-            <br> Recibe una carta misteriosa de ella, que lo lleva de vuelta al pueblo de Silent Hill. 
-            <br>A lo largo del juego, James se enfrenta a sus propios demonios, tratando de descubrir la verdad detrás de la muerte de Mary.</p>
-        </section>
+            <section class="col-md-4 mb-4 text-center">
+                <h2 class="main__section-title">Maria</h2>
+                <img src="img/maria.png" alt="Maria" class="img-fluid">
+                <p>Maria es una mujer que James encuentra en Silent Hill. Se parece a su esposa fallecida, Mary, pero su comportamiento es más provocativo y manipulador. Maria es una representación de los deseos reprimidos de James.</p>
+            </section>
 
-        <section>
-            <h2>Maria</h2>
-            <img src="img/maria.png" alt=center alt="maria"> 
-            <p>Maria es una mujer que James conoce en Silent Hill. Ella se parece mucho a su esposa muerta, Mary, pero tiene una personalidad muy diferente.
-            <br> A lo largo del juego, Maria es un símbolo de la culpa y el deseo de James, y su presencia en Silent Hill no es una coincidencia.</p>
-        </section>
+            <section class="col-md-4 mb-4 text-center">
+                <h2 class="main__section-title">Angela Orosco</h2>
+                <img src="img/angela.png" alt="Angela Orosco" class="img-fluid">
+                <p>Angela es una mujer joven que llega a Silent Hill en busca de su madre. Su historia está marcada por los abusos que sufrió a manos de su familia.</p>
+            </section>
 
-        <section>
-            <h2>Pyramid Head</h2>
-            <img src="img/piramidhead.jpg" alt="Pyramid Head">
-            <p>Pyramid Head es una criatura monstruosa y uno de los enemigos más famoso de Silent Hill.
-            <br> Simboliza el castigo y la culpa de James, y aparece en momentos clave para perseguir y torturarlo.</p>
-        </section>
+            <section class="col-md-4 mb-4 text-center">
+                <h2 class="main__section-title">Eddie Dombrowski</h2>
+                <img src="img/eddie.png" alt="Eddie Dombrowski" class="img-fluid">
+                <p>Eddie es un hombre con problemas de autoestima y un historial de abusos. En Silent Hill, muestra signos de inestabilidad mental.</p>
+            </section>
+
+            <section class="col-md-4 mb-4 text-center">
+                <h2 class="main__section-title">Laura</h2>
+                <img src="img/laura.png" alt="Laura" class="img-fluid">
+                <p>Laura es una niña que también aparece en Silent Hill, en busca de alguien especial para ella. Representa la inocencia y una conexión diferente con James, mostrándose ajena a las oscuras manifestaciones del pueblo.</p>
+            </section>
+        </div>
     </main>
 
-     <!--indice de abajo -->
-    <footer>
-        <div>
-            <p>Roberto Cesar Bonilla Cruz</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="personajes.html">Personajes</a></li>
-                    <li><a href="lugares.html">Lugares</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- Footer -->
+    <footer class="footer bg-secondary text-center py-3 mt-5">
+        <p>Roberto Cesar Bonilla Cruz</p>
+        <nav class="footer__nav">
+            <ul class="footer__nav-list list-inline">
+                <li class="footer__nav-item list-inline-item"><a href="index.html" class="footer__nav-link text-light">Inicio</a></li>
+                <li class="footer__nav-item list-inline-item"><a href="personajes.html" class="footer__nav-link text-light">Personajes</a></li>
+                <li class="footer__nav-item list-inline-item"><a href="lugares.html" class="footer__nav-link text-light">Lugares</a></li>
+                <li class="footer__nav-item list-inline-item"><a href="historia.html" class="footer__nav-link text-light">Historia</a></li>
+                <li class="footer__nav-item list-inline-item"><a href="monstruos.html" class="footer__nav-link text-light">Monstruos</a></li>
+            </ul>
+        </nav>
     </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
