@@ -1,0 +1,24 @@
+header {
+  background-color: $bg-color-dark;
+  color: $bg-color-light;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: $primary-font;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: $bg-color-light;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: $highlight-color;
+}

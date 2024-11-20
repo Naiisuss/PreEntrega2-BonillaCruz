@@ -1,0 +1,25 @@
+body.monstruos {
+    background-color: #1b1b1b;
+    color: #ddd;
+}
+
+.main.monstruos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    padding: 2em;
+}
+
+.main__section.monstruos {
+    background-color: #222;
+    padding: 1.5em;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.main__section-title.monstruos {
+    font-family: $primary-font;
+    color: $highlight-color;
+    font-size: 1.8em;
+}

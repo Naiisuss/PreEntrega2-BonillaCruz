@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.header, .footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
