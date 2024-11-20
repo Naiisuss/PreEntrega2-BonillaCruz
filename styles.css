@@ -1,127 +1,16 @@
-/* Estilos base */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'PT Sans', sans-serif;
-    background-color: #111;
-    color: #fafafa;
-}
 
+/* todos los banners */
 .header {
-    background-color: #181818;
-    padding: 1em;
-    text-align: center;
-}
-
-.header__nav-list {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-}
-
-.header__nav-item {
-    margin: 0 10px;
-}
-
-.header__nav-link {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.header__nav-link:hover {
-    color: #e0e0e0;
-}
-
-.main {
-    padding: 1.5em;
-}
-
-.main__section {
-    background-color: #222;
-    padding: 1.5em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    margin-bottom: 1.5em;
-    text-align: center;
-}
-
-.main__section-title {
-    font-family: 'Special Elite', cursive;
-    color: #ece9da;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-p {
-    line-height: 1.6;
-}
-
-.footer {
-    background-color: #333;
-    color: #ccc;
-    text-align: center;
-    padding: 1em;
-}
-
-.footer__nav-list {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 1em 0;
-}
-
-.footer__nav-item {
-    margin: 0 10px;
-}
-
-.footer__nav-link {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer__nav-link:hover {
-    color: #e0e0e0;
-}
-
-/* estilos de pj*/
-
-.personajes-grid section {
-    background-color: rgba(255, 255, 255, 0.1); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-    padding: 20px; 
-    transition: transform 0.2s; 
-}
-
-.personajes-grid section:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); 
-}
-/* Estilos únicos para historia.html */
-
-body.historia {
-    background: #1a1a1a;
-    color: #f5f5f5;
-    font-family: 'PT Sans', sans-serif;
-}
-
-.header.historia {
     position: relative;
-    background: url('img/banner.jpg') no-repeat center center/cover;
+    background-image: url('img/banner.jpg'); 
+    background-size: cover;
+    background-position: center;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
     text-align: center;
+    color: #fff;
 }
 
 .header__overlay {
@@ -130,19 +19,22 @@ body.historia {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
 }
 
-.header__title.historia {
+.header__title {
     position: relative;
-    font-size: 3em;
+    font-size: 3em; 
     font-family: 'Special Elite', cursive;
-    color: #f5f8da;
-    z-index: 1;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    padding: 0 20px;
+    color: #ffffffef;
+    z-index: 1; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); 
+    animation: blink 1s infinite; 
+    margin: 0;
 }
 
+/* NAV dentro del banner */
 .header__nav {
     position: absolute;
     bottom: 20px;
@@ -155,42 +47,113 @@ body.historia {
 .header__nav-list {
     display: flex;
     gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.header__nav-item a {
-    color: #fffbea;
+.header__nav-link {
+    color: #ccc;
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
-.header__nav-item a:hover {
+.header__nav-link:hover {
     color: #ffffff;
 }
 
-.main.personajes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2em;
-    padding: 2em;
+/* Animación de parpadeo del texto */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
 }
 
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Special Elite', sans-serif;
+    background-color: #0a0a0a;
+    color: #dcdcdc;
+}
+
+/* NAV */
+.header__nav-list {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+.header__nav-item {
+    margin: 0 10px;
+}
+
+.header__nav-link {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+    color: #ffffff;
+}
+
+/* Estilos principales */
+.main {
+    padding: 1.5em;
+}
+
+.main__section {
+    background-color: #1a1a1a;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.main__section-title {
+    font-family: 'Special Elite', cursive;
+    color: #fffae6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/* estilos de pjs */
+.personajes-grid section {
+    background-color: rgba(15, 15, 15, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    padding: 20px; 
+    transition: transform 0.2s; 
+}
+
+.personajes-grid section:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); 
+}
+
+/* historia */
 body.historia {
     background: #1a1a1a;
     color: #f5f5f5;
     font-family: 'PT Sans', sans-serif;
-}
-
-.header.historia {
-    background-color: #222;
-    text-align: center;
-    padding: 2em;
-}
-
-.header__title.historia {
-    font-size: 2.5em;
-    font-family: 'Special Elite', cursive;
-    color: #fff6f4;
 }
 
 .main.historia {
@@ -199,6 +162,7 @@ body.historia {
     align-items: center;
     padding: 3em 0;
     gap: 3em;
+    margin-bottom: 50px; 
 }
 
 .main__section.historia {
@@ -238,14 +202,7 @@ p.historia {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
 }
 
-.footer.historia {
-    background-color: #222;
-    color: #aaa;
-    padding: 1em;
-    text-align: center;
-}
-
-/* Adaptaciones para pantallas pequeñas */
+/* pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .main__section.historia {
         flex-direction: column;
@@ -257,14 +214,12 @@ p.historia {
     }
 }
 
-/* Estilos únicos para monstruos.html */
+
+
+/* monstruos */
 body.monstruos {
     background-color: #1b1b1b;
     color: #ddd;
-}
-
-.header.monstruos {
-    background-color: #282828;
 }
 
 .main.monstruos {
@@ -288,77 +243,131 @@ body.monstruos {
     font-size: 1.8em;
 }
 
-.footer.monstruos {
-    background-color: #282828;
-    color: #aaa;
-    padding: 1.5em;
+.main__section.monstruos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
 }
-/* efectos banner y parpadeo*/
-.header {
-    position: relative;
-    background: url('img/banner.jpg') no-repeat center center/cover;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+
+@media screen and (max-width: 768px) {
+    .header__title {
+        font-size: 2.5em;
+    }
+    .main__section-title {
+        font-size: 1.5em;
+    }
+}
+
+
+/* Footer común */
+.footer {
+    background-color: #101010; 
+    color: #aaa; 
     text-align: center;
+    padding: 1em;
+    font-family: 'Special Elite', cursive; 
 }
 
-/* Efecto de overlay oscuro */
-.header__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+.footer p {
+    text-shadow: 0 0 2px #ffffff, 0 0 8px #fffff6, 0 0 9px #f9ffe5; 
+    color: #f5f5f5; 
+    font-size: 1.4em; 
 }
 
-/* Estilo del título del banner con efecto de parpadeo */
-.header__title {
-    position: relative;
-    font-size: 3em;
-    font-family: 'Special Elite', cursive;
-    color: #f5f8da;
-    z-index: 1;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    animation: blink 2s infinite; /* Añadimos animación de parpadeo */
-    padding: 0 20px;
-}
-
-/* Menú de navegación dentro del banner */
-.header__nav {
-    position: absolute;
-    bottom: 20px;
-    z-index: 2;
-    width: 100%;
+.footer__nav-list {
     display: flex;
     justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
 }
 
-.header__nav-list {
-    display: flex;
-    gap: 20px;
+.footer__nav-item {
+    margin: 0 10px;
 }
 
-.header__nav-link {
-    color: #ccc;
+.footer__nav-link {
+    color: #bebebe; 
     text-decoration: none;
-    font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
-.header__nav-link:hover {
-    color: #ffffff;
+
+.footer__nav-link:hover {
+    color: #ffffff; 
 }
 
-/* Efecto de parpadeo en el logo */
-@keyframes blink {
-    0%, 100% {
-        opacity: 1;
+/* MEDIAS QUERIS */
+
+@media screen and (max-width: 576px) {
+  
+    .header {
+        height: 200px; 
     }
-    50% {
-        opacity: 0.8;
+    .header__title {
+        font-size: 2em; 
+    }
+    .header__nav {
+        bottom: 10px; 
+    }
+    .header__nav-link {
+        font-size: 1em; 
+    }
+
+    .main {
+        padding: 1em; 
+    }
+    .main__section {
+        padding: 1.5em; 
+        margin-bottom: 1.5em; 
+    }
+    .main__section-title {
+        font-size: 1.5em; 
+    }
+    p {
+        font-size: 1em; 
+    }
+
+    img {
+        max-width: 100%;
+        height: auto; 
+    }
+
+    .personajes-grid section {
+        padding: 15px; 
+    }
+
+    .main.historia {
+        padding: 1em 0;
+        gap: 1.5em; 
+    }
+    .main__section.historia {
+        padding: 1.5em; 
+        width: 90%; 
+    }
+    .main__section-title.historia {
+        font-size: 1.5em;
+    }
+    p.historia {
+        font-size: 1em;
+    }
+
+    .main.monstruos {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); 
+        gap: 1em; 
+    }
+    .main__section.monstruos {
+        padding: 1em;
+    }
+    .main__section-title.monstruos {
+        font-size: 1.5em;
+    }
+
+
+    .footer {
+        padding: 0.5em;
+        font-size: 0.9em; 
+    }
+    .footer p {
+        font-size: 1.2em;
     }
 }

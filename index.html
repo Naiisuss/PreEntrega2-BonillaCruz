@@ -2,77 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Silent Hill 2 es un videojuego de terror psicológico. Descubre la historia, personajes y lugares emblemáticos del juego.">
+    <meta name="keywords" content="Silent Hill, videojuego, terror, psicológico, historia, personajes, lugares">
     <title>Silent Hill 2 - Inicio</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="img/sh.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <style>
-        /* Estilo general */
-        body {
-            background-color: #0a0a0a;
-            color: #dcdcdc;
-            font-family: 'Special Elite', sans-serif;
-        }
-
-        /* Estilo del banner con animación */
-        .header {
-            position: relative;
-            background: url('img/banner.jpg') no-repeat center center;
-            background-size: cover;
-            color: #e5e5e5;
-            text-align: center;
-            padding: 100px 0;
-            overflow: hidden;
-        }
-
-        .header__title {
-            font-size: 3.5em;
-            font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-            animation: flicker 1.5s infinite alternate;
-        }
-
-        /* Efecto de parpadeo para el título */
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-
-        /* Estilo oscuro para la barra de navegación */
-        .navbar-dark .navbar-nav .nav-link {
-            color: #cccccc;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-dark .navbar-nav .nav-link:hover {
-            color: #ffffff;
-        }
-
-        .main__section {
-            background-color: #1a1a1a;
-            padding: 2em;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-            margin-bottom: 2em;
-        }
-
-        .main__section-title {
-            color: #fffae6;
-        }
-
-        /* Estilo oscuro para el footer */
-        .footer {
-            background-color: #101010;
-            color: #aaa;
-            padding: 1em;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
+        <div class="header__overlay"></div>
         <h1 class="header__title">Silent Hill 2</h1>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a class="header__nav-link" href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="personajes.html">Personajes</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="lugares.html">Lugares</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="historia.html">Historia</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="monstruos.html">Monstruos</a></li>
+            </ul>
+        </nav>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
