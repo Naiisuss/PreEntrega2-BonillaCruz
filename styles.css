@@ -111,29 +111,29 @@ body.monstruos {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   background-color: rgba(0, 0, 0, 0.85);
   padding: 1.5em;
-  width: 85%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  gap: 1em;
+  gap: 4em;
   /* Responsive para pantallas pequeñas */
 }
 .main__section.historia .main_image {
-  flex: 1 1 40%;
-  max-width: 100px;
+  max-width: 100%; /* Asegura que la imagen no se salga de su contenedor */
+  width: 65%; /* Aplica la reducción del 35% */
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 .main__section.historia .historia-text {
-  flex: 1 1 60%;
+  flex: 1 1 100%;
   max-width: 200px;
   color: #ffffff;
   font-size: 0.9em;
-  line-height: 1.5;
+  line-height: 1;
   text-align: justify;
 }
 @media (max-width: 768px) {
