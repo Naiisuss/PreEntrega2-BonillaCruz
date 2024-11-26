@@ -12,10 +12,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Audio -->
+    <audio id="audioPlayer" loop>
+        <source src="src/SH-OST.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+    
+    <script>
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('audioPlayer');
+            audio.play().catch(function(error) {
+                console.log("Error al intentar reproducir el audio: " + error);
+            });
+        });
+    </script>
+    
     <header class="header">
         <div class="header__overlay"></div>
         <h1 class="header__title">Silent Hill 2</h1>
-      
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -39,7 +53,11 @@
     <main class="container mt-5">
         <section class="main__section" id="introduccion">
             <h2 class="main__section-title">Introducción</h2>
-            <p>Silent Hill 2 es un clásico del género de terror psicológico. Lanzado por primera vez en 2001 y con un remake en 2024, ha cautivado a generaciones de jugadores con su oscura narrativa y su atmósfera única.</p>
+            <p>
+                Silent Hill 2 es considerado uno de los mayores exponentes del género de terror psicológico en la historia de los videojuegos. Lanzado originalmente en 2001, marcó un hito por su innovadora narrativa y su habilidad para explorar emociones humanas complejas como la culpa, el duelo y la redención. La experiencia de juego, ambientada en el enigmático y opresivo pueblo de Silent Hill, sumerge al jugador en una atmósfera única, llena de misterio y simbolismo.
+                
+                El reciente remake, lanzado en 2024, ha llevado esta obra maestra a una nueva generación de jugadores, con gráficos modernizados, diseño de sonido inmersivo y una reinterpretación fiel del original. Con personajes inolvidables como James Sunderland y criaturas icónicas como Pyramid Head, Silent Hill 2 sigue siendo una referencia en la industria y una experiencia inolvidable para quienes buscan algo más que miedo superficial.
+            </p>
         </section>
 
         <section class="main__section" id="contenido-principal">
@@ -49,7 +67,8 @@
 
         <section class="main__section" id="detalles">
             <h2>Detalles del Juego</h2>
-            <p>Silent Hill 2 es ampliamente aclamado por su innovadora narrativa y su atmósfera opresiva, con enemigos como Pyramid Head y la enfermera deformada, el juego provoca miedo a través de la simbología y el diseño de sus personajes.</p>
+            <p>Silent Hill 2 es reconocido por su narrativa innovadora y su atmósfera opresiva, que exploran temas como la culpa y el remordimiento a través del viaje de James Sunderland. Los enemigos, como el icónico Pyramid Head y las enfermeras deformadas, no solo aterran por su diseño, sino que simbolizan los conflictos internos del protagonista.
+                La música de Akira Yamaoka y el diseño sonoro intensifican la experiencia, combinando silencios inquietantes y sonidos perturbadores que sumergen al jugador en un ambiente de constante tensión. Cada detalle, desde los escenarios hasta los diálogos, contribuye a una experiencia emocional que trasciende el terror convencional, invitando a reflexionar sobre el peso de las emociones y los secretos del pueblo envuelto en niebla.</p>
         </section>
     </main>
 

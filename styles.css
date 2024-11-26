@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .header {
   position: relative;
   background-image: url("img/banner.jpg");
@@ -17,7 +16,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.267);
   z-index: 0;
 }
 .header__title {
@@ -71,7 +70,8 @@ body {
   color: #dcdcdc;
 }
 body.historia {
-  background: #1a1a1a;
+  background: url("img/fog.gif") no-repeat center center fixed;
+  background-size: cover;
   color: #f5f5f5;
   font-family: "PT Sans", sans-serif;
 }
@@ -98,7 +98,7 @@ body.monstruos {
   padding: 2em;
 }
 .main__section {
-  background-color: #1a1a1a;
+  background-color: rgba(0, 0, 0, 0.7607843137);
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
@@ -109,45 +109,61 @@ body.monstruos {
 }
 .main__section.historia {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: right;
-  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.705);
   padding: 1.5em;
-  width: 100%;
+  width: 90%;
+  max-width: 1200px;
   height: auto;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-  gap: 4em;
-  /* Responsive para pantallas pequeñas */
+  gap: 1.5em;
 }
 .main__section.historia .main_image {
-  max-width: 100%; /* Asegura que la imagen no se salga de su contenedor */
-  width: 65%; /* Aplica la reducción del 35% */
+  width: 60%;
   height: auto;
   object-fit: contain;
+  max-width: 100%;
+  flex-shrink: 0;
+  max-height: 300px;
 }
 .main__section.historia .historia-text {
   flex: 1 1 100%;
-  max-width: 200px;
+  width: 100%;
   color: #ffffff;
   font-size: 0.9em;
-  line-height: 1;
-  text-align: justify;
+  line-height: 1.2;
+  text-align: center;
+  padding: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 1024px) {
+  .main__section.historia {
+    width: 80%;
+    gap: 1.5em;
+  }
+  .main__section.historia .main_image {
+    width: 70%;
+    max-height: 250px;
+  }
+  .main__section.historia .historia-text {
+    font-size: 0.85em;
+  }
 }
 @media (max-width: 768px) {
   .main__section.historia {
-    flex-direction: column;
-    width: 80%;
-    gap: 1em;
+    width: 90%;
+    gap: 1.2em;
   }
   .main__section.historia .main_image {
-    max-width: 150px;
+    width: 80%;
+    max-height: 220px;
   }
   .main__section.historia .historia-text {
-    max-width: 100%;
-    text-align: center;
     font-size: 0.8em;
   }
 }
@@ -259,6 +275,54 @@ p.historia {
   }
   .footer p {
     font-size: 1.2em;
+  }
+}
+body {
+  background: url("img/niebla.gif") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  overflow: auto;
+}
+body .niebla {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+body .niebla::before,
+body .niebla::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  filter: blur(5px);
+  opacity: 0.5;
+  animation: moverNiebla 20s linear infinite;
+}
+body .niebla::after {
+  background: rgba(255, 255, 255, 0.3);
+  animation: moverNieblaLento 40s linear infinite;
+}
+@keyframes moverNiebla {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes moverNieblaLento {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
